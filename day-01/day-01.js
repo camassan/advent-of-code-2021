@@ -1,8 +1,11 @@
+// imports
 import { depthMeasurements } from './day-01-input.js'
 
-// ==============================================
-// General Setup & Utility Functions
-// ==============================================
+/**
+ * ==============================================
+ * General Setup & Utility Functions
+ * ==============================================
+ */
 const countIncreases = (measurementArr) => {
   let counter = 0;
   measurementArr.forEach((measurement, idx, arr) => {
@@ -13,14 +16,18 @@ const countIncreases = (measurementArr) => {
   return counter;
 }
 
-// ==============================================
-// Part 1
-// ==============================================
+/**
+ * ==============================================
+ * Part 1
+ * ==============================================
+ */
 const counterSingleMeasurements = countIncreases(depthMeasurements);
 
-// ==============================================
-// Part 2
-// ==============================================
+/**
+ * ==============================================
+ * Part 2
+ * ==============================================
+ */
 const groupMeasurements = [];
 depthMeasurements.forEach((measurement, idx, arr) => {
   if ((idx + 2) <= arr.length) {
@@ -30,12 +37,12 @@ depthMeasurements.forEach((measurement, idx, arr) => {
 
 const counterGroupMeasurements = countIncreases(groupMeasurements);
 
-// ==============================================
-// Print Solutions
-// ==============================================
+/**
+ * ==============================================
+ * Print Solutions
+ * ==============================================
+ */
 console.log(`
-  ======================
-  Solution Day 01
   ======================
 
   Part 1:
