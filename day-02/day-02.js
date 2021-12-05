@@ -10,15 +10,18 @@ const splitInputs = directionInputs.map(dirInput => {
 
 const parseCommands = (forwardFn, downFn, upFn) => {
   splitInputs.forEach(input => {
-    switch (input.command) {
+    const command = input.command;
+    const value = parseInt(input.value);
+    
+    switch (command) {
       case 'forward':
-        forwardFn(parseInt(input.value));
+        forwardFn(value);
         break;
       case 'down':
-        downFn(parseInt(input.value));
+        downFn(value);
         break;
       case 'up':
-        upFn(parseInt(input.value));
+        upFn(value);
         break;
       default:
         console.log('ERROR: unknown command');
