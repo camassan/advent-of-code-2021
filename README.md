@@ -17,14 +17,11 @@ To run the puzzle solutions use the scripts in the `package.json` file.
 When adding a new puzzle, add a script to the `package.json` following this pattern:
 
 ```json
-// ...
 "scripts": {
   "day-01": "node ./day-01/day-01.js",
   "day-02": "node ./day-02/day-02.js",
   "day-03": "node ./day-03/day-03.js"
-  // ...
-},
-// ...
+}
 ```
 
 Execute a script using npm.
