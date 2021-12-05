@@ -6,9 +6,9 @@ A series of puzzles that have to be solved in order to save Christmas.
 
 ### Template files
 
-There are `.js` file templates that can be used when adding a new puzzle. `day-xx-template.js` for the puzzle solving and `day-xx-input.js` for the puzzle input.
+There are `.js` file templates in the `day-xx` directory that can be used when adding a new puzzle. `day-xx-template.js` for the puzzle solving and `day-xx-input.js` for the puzzle input.
 
-When adding a new puzzle, create a new directory named `day-xx` (xx => the puzzle day's number) and copy the two template files in there and rename them accordingly.
+When adding a new puzzle, create a new directory named `day-DAYNUMBER` (DAYNUMBER => the puzzle day's number) and copy the two template files in there and rename them accordingly.
 
 ### Run the puzzles
 
