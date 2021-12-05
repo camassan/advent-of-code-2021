@@ -1,12 +1,13 @@
 import { directionInputs } from "./day-02-input.js";
 
-// Create usable inputs
+// ==============================================
+// General Setup & Utility Functions
+// ==============================================
 const splitInputs = directionInputs.map(dirInput => {
   const splitCommand = dirInput.split(" ");
   return { command: splitCommand[0], value: splitCommand[1] };
 });
 
-// Parse commands utility function
 const parseCommands = (forwardFn, downFn, upFn) => {
   splitInputs.forEach(input => {
     switch (input.command) {
@@ -26,7 +27,9 @@ const parseCommands = (forwardFn, downFn, upFn) => {
   });
 }
 
+// ==============================================
 // Part 1
+// ==============================================
 let horizontalPos1 = 0;
 let depth1 = 0;
 
@@ -36,7 +39,9 @@ const upFn1 = val => { depth1 -= val }
 
 parseCommands(forwardFn1, downFn1, upFn1);
 
+// ==============================================
 // Part 2
+// ==============================================
 let horizontalPos2 = 0;
 let depth2 = 0;
 let aim = 0;
@@ -50,7 +55,9 @@ const upFn2 = val => { aim -= val }
 
 parseCommands(forwardFn2, downFn2, upFn2);
 
-// PRINT SOLUTIONS
+// ==============================================
+// Print Solutions
+// ==============================================
 console.log(`
   ======================
   Solution Day 02
